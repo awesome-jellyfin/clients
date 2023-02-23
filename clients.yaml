@@ -1,0 +1,59 @@
+clients:
+  - name: Jellyfin Media Player
+    targets:
+      - Windows
+      - Linux
+      - macOS
+    official: true
+    oss: https://github.com/jellyfin/jellyfin-media-player
+    price:
+      free: true
+    downloads:
+      github: https://github.com/jellyfin/jellyfin-media-player/releases
+      flathub: https://flathub.org/apps/details/com.github.iwalton3.jellyfin-media-player
+
+  - name: 'Infuse'
+    targets:
+      - iOS
+      - AppleTV
+    website: https://firecore.com/infuse
+    price:
+      free: true
+      paid: true
+    downloads:
+      appstore: https://apps.apple.com/app/id1136220934?mt=8
+
+# ---
+
+targets:
+  - key: Desktop
+    display: "💻 Desktop"
+    has:
+      Windows: "Windows"
+      macOS: "macOS"
+      Linux: "Linux"
+
+  - key: Mobile
+    display: "📱 Mobile"
+    has:
+      iOS: "iOS"
+      Android: "Android"
+
+  - key: TV
+    display: "📺 TV"
+    has:
+      AppleTV: "Apple TV"
+
+downloads:
+  github:
+    icons:
+      light: "assets/github-mark-white.png"
+      dark: "assets/github-mark.png"
+  flathub:
+    icons:
+      light: "assets/flathub.png"
+      dark: "assets/flathub.png"
+  appstore:
+    icons:
+      light: "assets/appstore-light.png"
+      dark: "assets/appstore-dark.png"

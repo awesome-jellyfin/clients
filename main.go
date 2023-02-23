@@ -44,7 +44,6 @@ func main() {
 		}
 	}
 
-	// fill Target for clients
 	identifierClientMap := make(map[string][]*Client)
 	for _, client := range config.Clients {
 		for _, targetStr := range client.TargetsStr {
@@ -56,9 +55,9 @@ func main() {
 	}
 
 	for _, target := range config.Targets {
-		fmt.Printf("# %s\n\n", target.Display)
+		fmt.Printf("## %s\n\n", target.Display)
 		for has, hasDisplay := range target.Has {
-			fmt.Printf("## %s\n\n", hasDisplay)
+			fmt.Printf("### %s\n\n", hasDisplay)
 
 			fmt.Println("| Name | Website | OSS | Free | Paid | Downloads |")
 			fmt.Println("|------|---------|-----|------|------|-----------|")
@@ -81,7 +80,7 @@ func main() {
 
 				for hoster, u := range client.Downloads {
 					if downloads.Len() > 0 {
-						downloads.WriteString(", ")
+						downloads.WriteString(" ")
 					}
 
 					dl, ok := config.Downloads[hoster]
