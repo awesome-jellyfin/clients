@@ -81,7 +81,7 @@ func main() {
 
 				for hoster, u := range client.Downloads {
 					if downloads.Len() > 0 {
-						downloads.WriteString(" | ")
+						downloads.WriteString(", ")
 					}
 
 					dl, ok := config.Downloads[hoster]
@@ -89,8 +89,16 @@ func main() {
 						panic("cannot find download " + hoster)
 					}
 
-					downloads.WriteString(fmt.Sprintf("[![logo-light](%s#gh-dark-mode-only)![logo-dark](%s#gh-light-mode-only)](%s)",
-						dl.Icons.Light, dl.Icons.Dark, u))
+					img := fmt.Sprintf(`
+<a href="%s">
+	<picture>
+		<source media="(prefers-color-scheme: dark)" srcset="%s">
+		<source media="(prefers-color-scheme: light)" srcset="%s">
+		<img src="%s">
+	</picture>
+</a>`, u, dl.Icons.Light, dl.Icons.Dark, dl.Icons.Dark)
+
+					downloads.WriteString(strings.ReplaceAll(strings.ReplaceAll(img, "\n", ""), "\t", ""))
 				}
 
 				if client.OpenSourceURL != "" {
