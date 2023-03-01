@@ -3,13 +3,15 @@
 > A List of Awesome Jellyfin Clients
 
 <!--
-DO NOT EDIT THIS TABLE
+!!! DO NOT EDIT THIS TABLE !!!
+Edit clients.yaml
 -->
 
 {{ CLIENTS }}
 
 <!--
-DO NOT EDIT THIS TABLE
+!!! DO NOT EDIT THIS TABLE !!!
+Edit clients.yaml
 -->
 
 # Contributing
