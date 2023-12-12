@@ -147,6 +147,35 @@ clients:
       - icon: google-playstore
         url: https://play.google.com/store/apps/details?id=tv.mrmc.mrmc
 
+  - name: "Delfin"
+    targets: [ Linux ]
+    oss: https://codeberg.org/avery42/delfin
+    official: false
+    beta: true
+    downloads:
+      - icon: flathub
+        url: https://flathub.org/apps/cafe.avery.Delfin
+
+  - name: "Supersonic"
+    targets: [ Windows, Linux, macOS ]
+    types: [ Music ]
+    oss: https://github.com/dweymouth/supersonic
+    downloads:
+      - icon: github
+        url: https://github.com/dweymouth/supersonic
+      - icon: flathub
+        url: https://flathub.org/apps/io.github.dweymouth.supersonic
+
+  - name: "Tauon Music Box"
+    targets: [ Windows, Linux ]
+    types: [ Music ]
+    oss: https://github.com/Taiko2k/TauonMusicBox
+    downloads:
+      - icon: github
+        url: https://github.com/Taiko2k/TauonMusicBox
+      - icon: flathub
+        url: https://flathub.org/apps/com.github.taiko2k.tauonmb
+
 # ---
 
 icons:
